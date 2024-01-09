@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Stylish Calculator</title>
+</head>
+<body>
+    <div class="calculator">
+        <div class="display" id="display">0</div>
+	<button class='blue' onclick="setOperator('%')">%</button>
+	<button class='blue' onclick="setOperator('//')">//</button>
+        <button class='red' onclick="clearDisplay()">C</button>
+        <button class='red' onclick="removeLastChar()">DEL</button>
+        <button class='blue' onclick="calculateReciprocal()">1/x</button>
+        <button class='blue' onclick="calculatePower(prompt('Enter exponent'))">x^n</button>
+        <button class='blue' onclick="calculateNthRoot(prompt('Enter root degree'))">√x</button>
+	<button class='blue' onclick="setOperator('/')">/</button>
+        <button onclick="appendToDisplay('7')">7</button>
+        <button onclick="appendToDisplay('8')">8</button>
+        <button onclick="appendToDisplay('9')">9</button>
+        <button class='blue' onclick="setOperator('*')">*</button>
+        <button onclick="appendToDisplay('4')">4</button>
+        <button onclick="appendToDisplay('5')">5</button>
+        <button onclick="appendToDisplay('6')">6</button>
+        <button class='blue' onclick="setOperator('-')">-</button>
+        <button onclick="appendToDisplay('1')">1</button>
+        <button onclick="appendToDisplay('2')">2</button>
+        <button onclick="appendToDisplay('3')">3</button>
+        <button class='blue' onclick="setOperator('+')">+</button>
+        <button class='blue' onclick="toggleSign()">+/-</button>
+        <button onclick="appendToDisplay('0')">0</button>
+        <button class='blue' onclick="appendToDisplay('.')">.</button>
+        <button class='green' onclick="calculate()">=</button>
+	<button class='red hist' onclick="toggleHistory()">HISTORY</button>
+    </div>
+    <div id="history-container-wrapper" class="">
+        <div id="history-container" class='hidden'></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
