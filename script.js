@@ -16,7 +16,7 @@ function handleKeyPress(event) {
         appendToDisplay(key);
     } else if (['+', '-', '*', '/', '%', '^'].includes(key)) {
         setOperator(key);
-    } else if (key === 'Enter') {
+    } else if (key === 'Enter' || key === '=') {
         calculate();
     } else if (key === 'Backspace') {
         removeLastChar();
@@ -135,6 +135,7 @@ function calculate() {
     }
 }
 
+/*
 function calculateReciprocal() {
     if (parseFloat(displayValue) !== 0) {
         displayValue = (1 / parseFloat(displayValue)).toString();
@@ -154,6 +155,44 @@ function calculateSQRT() {
     }
     updateDisplay();
 }
+*/
+
+function calculateReciprocal() {
+    if (parseFloat(displayValue) !== 0) {
+        let result = 1 / parseFloat(displayValue);
+	let prevDisplayValue = parseFloat(displayValue);
+        displayValue = result.toString();
+        updateDisplay();
+
+        // Store the calculation in history
+        calculationHistory.push({
+            expression: `1 / ${prevDisplayValue}`,
+            result: result.toString(),
+        });
+    } else {
+        displayValue = 'Error';
+        updateDisplay();
+    }
+}
+
+function calculateSQRT() {
+    if (parseFloat(displayValue) >= 0) {
+        let result = Math.sqrt(parseFloat(displayValue));
+	let prevDisplayValue = parseFloat(displayValue);
+        displayValue = result.toString();
+
+        // Store the calculation in history
+        calculationHistory.push({
+            expression: `√${prevDisplayValue}`,
+            result: result.toString(),
+        });
+	updateDisplay();
+    } else {
+        displayValue = 'Error';
+        updateDisplay();
+    }
+}
+
 
 function toggleSign() {
     displayValue = (parseFloat(displayValue) * -1).toString();
