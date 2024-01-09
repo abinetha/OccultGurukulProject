@@ -16,20 +16,6 @@ Equals button for executing calculations
 
 Display area to show results
 
-**Compatibility**
-
-The calculator is designed to be compatible with keyboard inputs. Users can utilize the following keyboard buttons for enhanced functionality:
-
-Numeric digits (0-9): Input numbers directly from the keyboard.
-
-Decimal point (.): Add decimal numbers for more precise calculations.
-
-Basic operation keys (+, -, *, /, %): Perform arithmetic operations directly from the keyboard.
-
-Enter key: Execute calculations without using the mouse.
-
-Backspace key: Remove the last entered character for correction.
-
 **Decimal Handling:** Allows users to input and calculate decimal numbers for more precise calculations.
 
 **Clear Function:** Resets the calculator's state, providing a clean slate for new calculations.
@@ -37,6 +23,20 @@ Backspace key: Remove the last entered character for correction.
 **Delete Function:** Removes the last entered digit, allowing users to correct input errors.
 
 **Calculation History:** A history button to toggle and review previous operations.
+
+**Compatibility**
+
+The calculator is designed to be compatible with keyboard inputs. Users can utilize the following keyboard buttons for enhanced functionality:
+
+**Numeric digits (0-9):** Input numbers directly from the keyboard.
+
+**Decimal point (.):** Add decimal numbers for more precise calculations.
+
+**Basic operation keys (+, -, *, /, %):** Perform arithmetic operations directly from the keyboard.
+
+**Enter key:** Execute calculations without using the mouse.
+
+**Backspace key:** Remove the last entered character for correction.
 
 **Functionality**
 
