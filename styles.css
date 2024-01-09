@@ -21,13 +21,14 @@ body {
 #history-container {
     height: 630px; /* Set a maximum height for the container */
     overflow-y: auto; /* Enable vertical scrollbar when content exceeds the container height */
-    width: 500px;
+    width: 300px;
     background-color: #fff; /* White background color */
     border: 1px solid #ccc; /* Border color */
     border-radius: 8px; /* Border radius */
     padding: 10px;
     text-align: center;
     margin-left: 10px;
+    border: 3px solid black;
 }
 
 #history-container div {
