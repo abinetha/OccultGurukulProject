@@ -3,6 +3,27 @@ let operator = '';
 let operand = '';
 let calculationHistory = [];
 
+window.addEventListener('keydown', handleKeyPress);
+
+function handleKeyPress(event) {
+    // Get the key that was pressed
+    const key = event.key;
+
+    // Check if the key is a numeric digit or a specific operator
+    if (/[0-9]/.test(key)) {
+        appendToDisplay(key);
+    } else if (key === '.') {
+        appendToDisplay(key);
+    } else if (['+', '-', '*', '/', '%', '^'].includes(key)) {
+        setOperator(key);
+    } else if (key === 'Enter') {
+        calculate();
+    } else if (key === 'Backspace') {
+        removeLastChar();
+    }
+    // Add additional conditions for other keys if needed
+}
+
 function updateDisplay() {
     if (displayValue === 'Error') {
     	document.getElementById('display').innerText = displayValue;
@@ -92,6 +113,10 @@ function calculate() {
                     return;
                 }
                 break;
+            case '^':
+                result = Math.pow(parseFloat(operand), parseFloat(displayValue));  
+                break;
+	    		
             default:
                 break;
         }
@@ -110,23 +135,20 @@ function calculate() {
     }
 }
 
-function calculatePower(n) {
-    displayValue = Math.pow(parseFloat(displayValue), n).toString();
-    updateDisplay();
-}
-
-function calculateNthRoot(n) {
-    if (parseFloat(displayValue) >= 0) {
-        displayValue = Math.pow(parseFloat(displayValue), 1 / n).toString();
+function calculateReciprocal() {
+    if (parseFloat(displayValue) !== 0) {
+        displayValue = (1 / parseFloat(displayValue)).toString();
     } else {
         displayValue = 'Error';
     }
     updateDisplay();
+    updateDisplay();
+    
 }
 
-function calculateReciprocal() {
-    if (parseFloat(displayValue) !== 0) {
-        displayValue = (1 / parseFloat(displayValue)).toString();
+function calculateSQRT() {
+    if (parseFloat(displayValue) >= 0) {
+        displayValue = Math.sqrt(parseFloat(displayValue)).toString();
     } else {
         displayValue = 'Error';
     }
@@ -159,5 +181,4 @@ function toggleHistory() {
     let historyContainerWrapper = document.getElementById('history-container');
     historyContainerWrapper.classList.toggle('hidden');
     showHistory();
-    
 }
