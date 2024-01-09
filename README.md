@@ -32,7 +32,7 @@ The calculator is designed to be compatible with keyboard inputs. Users can util
 
 **Decimal point (.):** Add decimal numbers for more precise calculations.
 
-**Basic operation keys (+, -, *, /, %):** Perform arithmetic operations directly from the keyboard.
+**Basic operation keys (+, -, \*, /, %):** Perform arithmetic operations directly from the keyboard.
 
 **Enter key:** Execute calculations without using the mouse.
 
