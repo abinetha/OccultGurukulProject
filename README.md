@@ -34,7 +34,7 @@ The calculator is designed to be compatible with keyboard inputs. Users can util
 
 **Basic operation keys (+, -, \*, /, %):** Perform arithmetic operations directly from the keyboard.
 
-**Enter key:** Execute calculations without using the mouse.
+**'Enter' key or '=' key:** Execute calculations without using the mouse.
 
 **Backspace key:** Remove the last entered character for correction.
 
