@@ -1,14 +1,19 @@
 **Simple Calculator App**
 **Overview**
+
 This project is a web-based calculator application that allows users to perform basic arithmetic operations, including addition, subtraction, multiplication, and division. The calculator also includes optional challenges, such as handling decimal numbers, implementing a 'clear' function, adding a delete function, and a calculation history feature.
 
 **Features**
 **User Interface**
+
 The application includes the following elements in its user interface:
 
 Numeric buttons (0-9)
+
 Basic operation buttons (addition, subtraction, multiplication, division)
+
 Equals button for executing calculations
+
 Display area to show results
 **Decimal Handling:** Allows users to input and calculate decimal numbers for more precise calculations.
 **Clear Function:** Resets the calculator's state, providing a clean slate for new calculations.
